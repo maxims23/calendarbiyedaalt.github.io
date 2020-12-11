@@ -4,16 +4,69 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>Calendar</title>
 	<link rel = "stylesheet" type = "text/css" href = "style/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<dev class="topHeader">
-		Logo her Match
+	<script src="js/script.js"></script>
+	<dev class="navbar">
+		<img id="logo" src="res/logo.jpg" alt="Зурхай" style="width:150px; padding-top: 10px; padding-bottom: 10px;">
+		<form action="xoxo.php" id="uzeh">
+			<label for="val1">Ордны зохицолоо үзээрэй:</label>
+			<select id="val1">
+			  <option value="honi">Хонь</option>
+			  <option value="uher">Үхэр</option>
+			  <option value="iher">Ихэр</option>
+			  <option value="melhii">Мэлхий</option>
+			  <option value="arslan">Арслан</option>
+			  <option value="honi">Охин</option>
+			  <option value="jinluur">Жинлүүр</option>
+			  <option value="hilents" selected>Хилэнц</option>
+			  <option value="num">Нум</option>
+			  <option value="matar">Матар</option>
+			  <option value="humh">Хумх</option>
+			  <option value="zagas">Загас</option>
+			</select>
+			<select id="val2">
+			  <option value="honi">Хонь</option>
+			  <option value="uher">Үхэр</option>
+			  <option value="iher">Ихэр</option>
+			  <option value="melhii" selected>Мэлхий</option>
+			  <option value="arslan">Арслан</option>
+			  <option value="honi">Охин</option>
+			  <option value="jinluur">Жинлүүр</option>
+			  <option value="hilents">Хилэнц</option>
+			  <option value="num">Нум</option>
+			  <option value="matar">Матар</option>
+			  <option value="humh">Хумх</option>
+			  <option value="zagas">Загас</option>
+			</select>
+			<input type="submit" value="Үзэх">
+		</form>
 	</dev>
-	<ul class="mainHeader">
-	  <li><a href="#">Нүүр</a></li>
-	  <li><a href="#">Ордууд</a></li>
+	<ul class="menu">
+	  <li><a href="#" class="active">Нүүр</a></li>
+	  <dev  id="mymenu">
+	  <li><a onclick="dropFunction()" class="dropbtn">Ордууд</a></li>
+		  <div  id="myDropdown" class="dropdown-content">
+		    <a href="#">Хонь</a>
+		    <a href="#">Үхэр</a>
+		    <a href="#">Ихэр</a>
+		    <a href="#">Мэлхий</a>
+		    <a href="#">Арслан</a>
+		    <a href="#">Охин</a>
+		    <a href="#">Жинлүүр</a>
+		    <a href="#">Хилэнц</a>
+		    <a href="#">Нум</a>
+		    <a href="#">Матар</a>
+		    <a href="#">Хумх</a>
+		    <a href="#">Загас</a>
+		  </div>
 	  <li><a href="#">Холбоо барих</a></li>
 	  <li><a href="#">Бидний тухай</a></li>
+	</dev>
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
 	</ul>
 	<br>
 	<br>

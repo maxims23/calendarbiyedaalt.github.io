@@ -1,6 +1,6 @@
 body{
-  margin-left: 100px;
-  margin-right: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
   font-family: 'Roboto';
   font-size: 20px;
 }
@@ -10,38 +10,119 @@ ul{
   padding: 0;
   overflow: hidden;
 }
-.topHeader{
-  padding-top: 20px;
-  padding-bottom: 20px;
+.navbar{
+  overflow: hidden;
+  padding: 10px 15px;
+  display: inline;
 }
-.mainHeader {
+/* Style the inks insidel the navigation bar */
+@media screen and (min-width: 800px) {
+.menu {
   overflow: hidden;
   border-top: 1px solid silver;
   border-bottom: 1px solid silver;
 }
+  .menu a {
+    float: left;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-size: 20px;
+  }
+  .menu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.menu a.icon {
+  display: none;
+  }
+}
 
-/* Style the links inside the navigation bar */
-.mainHeader a {
-  float: left;
-  color: #333;
-  text-align: center;
+@media screen and (max-width: 800px) {
+  .menu {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.menu #mymenu {
+  display: none;
+}
+
+/* Style navigation menu links */
+.menu a {
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 17px;
+  display: block;
+  color: #333;
   font-family: 'Roboto';
-  font-size: 20px;
 }
-.mainHeader a:after {
-    display: block;
-    float: right;
-    content: "";
-    height: 17px;
-    background: #49356b42;
-    width: 1px;
-    margin-left: 50px;
-    margin-top: 2px;
+
+/* Style the hamburger menu */
+.menu a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
-/* Add a color to the active/current link */
-.mainHeader a.active {
+
+/* Add a grey background color on mouse-over */
+.menu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+}
+
+/* Style the active link (or home/logo) */
+.menu .active {
   background-color: #4CAF50;
   color: white;
 }
+#uzeh{
+  padding: 21px 2px 20px;
+  font-size: 18px;
+  text-align: right;
+
+}
+/* dropdown menunii heseg*/
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
