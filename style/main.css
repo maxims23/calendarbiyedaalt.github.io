@@ -127,3 +127,11 @@ ul{
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
+
+/* footer heseg*/
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+}
