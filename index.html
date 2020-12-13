@@ -88,7 +88,28 @@
 	</ul>
 
 <h2>Монголбанкнаас зарласан ханш</h2>
-<p id="hansh"></p>
+<h3>Doller</h3>
+<p id="hansh"></p> <p id="moncur"></p> <p id="valcur"></p>
+<script>
+	
+// JSON өгөгдөл
+var myObj, myJSON, text, obj;
+
+// Storing data:
+myObj = { name: "Doller", mnt: 1, val: 2880 };
+myJSON = JSON.stringify(myObj);
+
+localStorage.setItem("testJSON", myJSON);
+
+// Retrieving data:
+text = localStorage.getItem("testJSON");
+obj = JSON.parse(text);
+document.getElementById("hansh").innerHTML = obj.name;
+
+document.getElementById("moncur").innerHTML = obj.mnt;
+
+document.getElementById("valcur").innerHTML = obj.val;
+</script>
 
 <footer>
   <p>Зурхайн веб сайт<br>
