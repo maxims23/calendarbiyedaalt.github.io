@@ -23,6 +23,20 @@ window.onclick = function(event) {
     }
   }
 }
+// JSON өгөгдөл
+var myObj, myJSON, text, obj;
+
+// Storing data:
+myObj = { name: "John", age: 31, city: "New York" };
+myJSON = JSON.stringify(myObj);
+localStorage.setItem("testJSON", myJSON);
+
+// Retrieving data:
+text = localStorage.getItem("testJSON");
+obj = JSON.parse(text);
+document.getElementById("hansh").innerHTML = obj.name;
+
+//tohiroonii JS
 function chanFunction() {
   var inpObj1 = document.getElementById("val1");
 
